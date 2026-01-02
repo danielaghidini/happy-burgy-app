@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f8cf00;
+  --color-primary-hover: #f1cb0a;
+  --color-dark-bg: #222;
+  --color-dark-surface: #333;
+  --color-light-text: #fafafa;
+
+  --font-lexend: "Lexend", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
+}
+
+/* Base Styles */
+body {
+  @apply bg-dark-bg font-lexend text-white;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+/* Components */
+.logo {
+  @apply w-[150px] pt-2.5;
+}
+
+input {
+  @apply bg-dark-surface text-light-text w-full rounded-[5px] border-none p-2.5;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &::placeholder {
+    @apply text-light-text font-semibold opacity-70;
+  }
+}
+
+.btn-fill {
+  @apply bg-primary border-primary cursor-pointer rounded-[5px] border-2 px-10 py-2.5 text-center text-lg font-bold text-black transition-all duration-300 ease-in-out;
+
+  &:hover {
+    @apply bg-primary-hover shadow-[0_0_15px_rgba(255,213,0,0.5)];
+  }
+}
+
+.btn-outline {
+  @apply text-primary border-primary cursor-pointer rounded-[5px] border-2 bg-transparent px-10 py-2.5 text-lg transition-colors duration-300;
+
+  &:hover {
+    @apply bg-primary text-black;
+  }
+}
+
+.link-text {
+  @apply text-primary cursor-pointer transition-colors;
+
+  &:hover {
+    @apply underline;
+  }
+}
