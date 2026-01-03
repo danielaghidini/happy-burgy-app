@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Input from "../components/Input";
 import { Link } from "react-router";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,9 @@ const Login = () => {
       onSubmit={handleSubmit}
     >
       <div className="items-center justify-center">
-        <img src="./logo.png" alt="" />
+        <Link to="/">
+          <img src="./logo.png" alt="" />
+        </Link>
       </div>
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center pt-5">
         <Input
@@ -30,10 +33,8 @@ const Login = () => {
           placeholder="Senha"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="btn-fill mt-2 w-full" type="submit">
-          Entrar
-        </button>
-        <Link className="link-text mt-2 w-full text-center" to="/Register">
+        <Button title="Entrar" className="w-full" />
+        <Link className="link-text mt-2 w-full text-center" to="/register">
           Não tenho uma conta
         </Link>
       </div>

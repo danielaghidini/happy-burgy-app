@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Input from "../components/Input";
 import { Link } from "react-router";
+import Input from "../components/Input";
+import Button from "../components/Button";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -20,7 +21,9 @@ const Register = () => {
       onSubmit={handleSubmit}
     >
       <div className="items-center justify-center">
-        <img src="./logo.png" alt="" />
+        <Link to="/">
+          <img src="./logo.png" alt="" />
+        </Link>
       </div>
       <div className="flex w-full max-w-[500px] flex-col items-center justify-center pt-5">
         <Input
@@ -48,10 +51,8 @@ const Register = () => {
           placeholder="CEP"
           onChange={(e) => setCep(e.target.value)}
         />
-        <button className="btn-fill mt-2 w-full" type="submit">
-          Cadastrar
-        </button>
-        <Link className="link-text mt-2 w-full text-center" to="/Login">
+        <Button title="Cadastrar" className="w-full" />
+        <Link className="link-text mt-2 w-full text-center" to="/login">
           Já tenho uma conta
         </Link>
       </div>

@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 const Home = () => {
   return (
-    <div>
-      <Link to="/Login">Login</Link>
+    <div className="flex h-screen flex-col items-center justify-center px-4">
+      <p>home</p>
     </div>
   );
 };
