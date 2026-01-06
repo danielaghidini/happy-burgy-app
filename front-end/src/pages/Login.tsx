@@ -7,9 +7,19 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log(email, password);
+
+    const response = await fetch("http://localhost:3000/login", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await response.json();
+    console.log(data);
   }
 
   return (
@@ -33,7 +43,7 @@ const Login = () => {
           placeholder="Senha"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button title="Entrar" className="w-full" />
+        <Button title="Entrar" className="w-full" type="submit" />
         <Link className="link-text mt-2 w-full text-center" to="/register">
           Não tenho uma conta
         </Link>

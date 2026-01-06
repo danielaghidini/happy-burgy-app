@@ -1,13 +1,26 @@
 import express from "express";
+import { connection } from "./src/db.js";
+import { prisma } from "./src/db.js";
+import cors from "cors";
 
 const app = express();
+app.set("json spaces", 2);
+app.use(express.json());
+app.use(cors());
+connection();
 
-app.get("/", (req, res) => {
-  res.send("Get Hello World");
-});
+console.log(process.env.DATABASE_URL);
 
-app.post("/", (req, res) => {
-  res.send("Post Hello World");
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  const user = await prisma.user.findFirst({
+    where: {
+      email: email,
+      password: password,
+    },
+  });
+  console.log(user);
+  res.json(user);
 });
 
 app.listen(3000, () => {
