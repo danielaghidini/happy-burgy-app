@@ -1,46 +1,29 @@
-# Happy Burgy App 🍔
+# Happy Burgy App
 
-Projeto Fullstack de uma hamburgueria moderna.
+Fullstack project for a burger restaurant.
 
-## Estrutura do Projeto
+## Project Structure
 
-- **front-end**: Aplicação construída com React, Vite e Tailwind CSS v4.
-- **back-end**: API e lógica do servidor (Node.js + Express, TypeScript).
+- **Front-end**: React application built with Vite and Tailwind CSS v4  
+- **Back-end**: REST API built with Node.js, Express, and TypeScript  
 
-## Tecnologias
+## Tech Stack
 
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- React Router 7
-- Express 5 (back-end)
+- React 19  
+- TypeScript  
+- Tailwind CSS 4  
+- React Router 7  
+- Node.js  
+- Express 5  
 
-## Como rodar o Front-end
+## Front-end Setup
 
-1. Navegue até a pasta do front-end:
-   ```bash
-   cd front-end
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
+1. Go to the front-end directory: `cd front-end`  
+2. Install dependencies: `npm install`  
+3. Start development server: `npm run dev`  
 
-## Como rodar o Back-end
+## Back-end Setup
 
-1. Navegue até a pasta do back-end:
-   ```bash
-   cd back-end
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Inicie o servidor em modo de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
+1. Go to the back-end directory: `cd back-end`  
+2. Install dependencies: `npm install`  
+3. Start development server: `npm run dev`  
