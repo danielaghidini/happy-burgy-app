@@ -2,11 +2,6 @@
 
 Fullstack project for a burger restaurant.
 
-## Project Structure
-
-- **Front-end**: React application built with Vite and Tailwind CSS v4  
-- **Back-end**: REST API built with Node.js, Express, and TypeScript  
-
 ## Tech Stack
 
 - React 19  
